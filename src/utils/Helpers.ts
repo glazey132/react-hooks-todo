@@ -20,3 +20,29 @@
     });
     return await response.json();
  };
+
+ /**
+  * Handle form validation for the login form
+  * @param email - user's auth email
+  * @param password - user's auth password
+  * @param setError - function that handles updating error state value
+  */
+ export const validateLoginForm = (
+     email: string,
+     password: string,
+     setError: (error: string | null) => void
+ ); boolean => {
+     // Check for undefined or empty input fields
+     if (!email || !password) {
+         setError('Please enter a valid email and password.');
+         return false;
+     }
+
+     // Validate email
+     if (!validator.isEmail(email)) {
+         setError('Please enter a valid email address');
+         return false;
+     }
+     // if we reach here we know things are valid so return true
+     return true;
+ }
