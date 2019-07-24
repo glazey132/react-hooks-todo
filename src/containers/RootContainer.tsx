@@ -5,7 +5,7 @@ import { Wrapper } from '../components/Styles';
 
 import Login from "./Login";
 
-const [state, setState] = useState(initialState);
+//const [state, setState] = React.useState(initialState);
 
 function RootContainer(){
     return (

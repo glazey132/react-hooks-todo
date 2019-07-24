@@ -14,7 +14,7 @@ import { Header } from '../components/Styles';
 function Login(){
     const [userEmail, setUserEmail] = React.useState('');
     const [userPassword, setUserPassword] = React.useState('');
-    const [loading, setLoading] = React.useState('');
+    const [loading, setLoading] = React.useState(false);
     const { error, showError } = useErrorHandler(null);
 
     const authHandler = async () => {

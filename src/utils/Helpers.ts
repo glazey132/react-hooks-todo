@@ -1,3 +1,4 @@
+import * as validator from 'validator';
 /**
  * API Request handler
  * @param url - api endpoint
@@ -31,7 +32,7 @@
      email: string,
      password: string,
      setError: (error: string | null) => void
- ); boolean => {
+ ): boolean => {
      // Check for undefined or empty input fields
      if (!email || !password) {
          setError('Please enter a valid email and password.');
